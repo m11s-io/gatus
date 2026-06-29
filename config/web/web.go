@@ -40,6 +40,14 @@ type Config struct {
 
 	// TLS configuration (optional)
 	TLS *TLSConfig `yaml:"tls,omitempty"`
+
+	// CORS configuration (optional)
+	CORS *CORSConfig `yaml:"cors,omitempty"`
+}
+
+// CORSConfig holds allowed origins for cross-origin requests
+type CORSConfig struct {
+	AllowedOrigins []string `yaml:"allowed-origins"`
 }
 
 type TLSConfig struct {

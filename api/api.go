@@ -4,6 +4,7 @@ import (
 	"io/fs"
 	"net/http"
 	"os"
+	"strings"
 
 	"github.com/TwiN/gatus/v5/config"
 	"github.com/TwiN/gatus/v5/config/ui"
@@ -58,6 +59,11 @@ func (a *API) createRouter(cfg *config.Config) *fiber.App {
 		app.Use(cors.New(cors.Config{
 			AllowOrigins:     "http://localhost:8081",
 			AllowCredentials: true,
+		}))
+	} else if cfg.Web.CORS != nil && len(cfg.Web.CORS.AllowedOrigins) > 0 {
+		allowedOrigins := strings.Join(cfg.Web.CORS.AllowedOrigins, ",")
+		app.Use(cors.New(cors.Config{
+			AllowOrigins: allowedOrigins,
 		}))
 	}
 	// Middlewares
