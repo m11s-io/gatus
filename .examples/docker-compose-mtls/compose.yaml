@@ -1,6 +1,6 @@
 services:
   nginx:
-    image: nginx:stable
+    image: nginx:stable@sha256:66b50d24288dba67f3d000b31223daefc4868c58d29aaacb6a4ff9771597b5eb
     volumes:
       - ./certs/server:/etc/nginx/certs
       - ./nginx:/etc/nginx/conf.d
@@ -10,7 +10,7 @@ services:
       - mtls
 
   gatus:
-    image: twinproduction/gatus:latest
+    image: twinproduction/gatus:latest@sha256:085ed63da963728965d00a3c78aa6167e3bf135218485b893201758e079e8415
     restart: always
     ports:
       - "8080:8080"

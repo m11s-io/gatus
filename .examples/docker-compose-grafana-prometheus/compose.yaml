@@ -1,7 +1,7 @@
 services:
   gatus:
     container_name: gatus
-    image: twinproduction/gatus
+    image: twinproduction/gatus@sha256:085ed63da963728965d00a3c78aa6167e3bf135218485b893201758e079e8415
     restart: always
     ports:
       - "8080:8080"
@@ -12,7 +12,7 @@ services:
 
   prometheus:
     container_name: prometheus
-    image: prom/prometheus:v3.5.0
+    image: prom/prometheus:v3.5.0@sha256:63805ebb8d2b3920190daf1cb14a60871b16fd38bed42b857a3182bc621f4996
     restart: always
     command: --config.file=/etc/prometheus/prometheus.yml
     ports:

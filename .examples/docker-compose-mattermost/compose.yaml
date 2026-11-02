@@ -1,7 +1,7 @@
 services:
   gatus:
     container_name: gatus
-    image: twinproduction/gatus:latest
+    image: twinproduction/gatus:latest@sha256:085ed63da963728965d00a3c78aa6167e3bf135218485b893201758e079e8415
     ports:
       - "8080:8080"
     volumes:
@@ -11,7 +11,7 @@ services:
 
   mattermost:
     container_name: mattermost
-    image: mattermost/mattermost-preview:5.26.0
+    image: mattermost/mattermost-preview:5.26.0@sha256:03d9893496553dc75d7d3f1f3d54301552ffa0f2a278b09ff2de47a0a494e03f
     ports:
       - "8065:8065"
     networks:

@@ -1,4 +1,4 @@
 # syntax=docker/dockerfile:1.28.0@sha256:bb22d9815c728170f72750f4e5b0d672e06176142e1d602c7e66c050100b7e5b
 
-FROM twinproduction/gatus
+FROM twinproduction/gatus@sha256:085ed63da963728965d00a3c78aa6167e3bf135218485b893201758e079e8415
 ADD config.yaml ./config/config.yaml

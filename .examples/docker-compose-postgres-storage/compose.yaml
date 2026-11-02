@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres
+    image: postgres@sha256:3a4264520e121176619f54ff867d12774bc81e95e7b84db58d63bccdb6144b81
     volumes:
       # PostgreSQL 18 and above declare the volume at /var/lib/postgresql.
       # For 17 and earlier, mount ./data/db at /var/lib/postgresql/data instead.
@@ -15,7 +15,7 @@ services:
       - web
 
   gatus:
-    image: twinproduction/gatus:latest
+    image: twinproduction/gatus:latest@sha256:085ed63da963728965d00a3c78aa6167e3bf135218485b893201758e079e8415
     restart: always
     ports:
       - "8080:8080"
