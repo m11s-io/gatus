@@ -2,7 +2,7 @@ name: publish-experimental
 on: [workflow_dispatch]
 jobs:
   publish-experimental:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v7

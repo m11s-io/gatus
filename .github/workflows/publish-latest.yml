@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   publish-latest:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     if: ${{ (github.event.workflow_run.conclusion == 'success') && (github.event.workflow_run.head_repository.full_name == github.repository) }}
     timeout-minutes: 240
     steps:
