@@ -10,6 +10,7 @@ jobs:
       repository: m11s/gatus
       tags: m11s/gatus:experimental
       platforms: linux/amd64
+      node-version: "24"
       push: true
       timeout-minutes: 60
     secrets:
