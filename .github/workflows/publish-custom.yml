@@ -18,6 +18,9 @@ jobs:
   publish-custom:
     runs-on: ubuntu-26.04
     timeout-minutes: 60
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v7
       - name: Set up QEMU
